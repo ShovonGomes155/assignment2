@@ -1,5 +1,318 @@
 *{
     margin:0;
     padding:0;
-    font-family: 'Rubik', sans-serif;
+    font-family: 'Work Sans', sans-serif;
+    --pink:#ff42a5;
+    --gr-one:linear-gradient(180deg, #F948B2 0%, #8758F1 100%);
+    --gr-two:linear-gradient(180deg, #F948B2 0%, #8758F1 100%);
+    --blue:#4EC5F7;
+    --text:#534C64;
+    --title:#0B0223;
+}
+
+/* header */
+header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    height: 90px;
+    background: #FFF;
+    box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.05);
+
+  }
+  
+  .logo img {
+    height: 50px;
+    margin-left: 100px;
+  }
+  
+  .menu {
+    list-style: none;
+    margin-right:100px ;
+  }
+  
+ .menu li {
+    display: inline-block;
+  } 
+  
+  .menu li a {
+    text-decoration: none;
+    color: #3C354F;
+    padding: 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  .fa-brands, .fab {
+	font-weight: 400;
+	font-size: 19px;
+}
+.fa-youtube{
+    color: #F61C0D;
+    padding:0px 5px 0px 5px ;
+}
+.fa-tiktok{
+    color: #000000;
+    text-shadow: 1px 1px 0px rgba(8,255,249,0.55);
+}
+.menu-btn{
+    padding: 9px 4px 9px 4px;
+    border-radius: 5px;
+    background: rgba(11, 2, 35, 0.10);
+}
+.logo{
+    display: flex;
+    align-items: center;
+}
+.logo img{
+    width: 60px;
+    object-fit: contain;
+}
+.logo p{
+    margin-left: 10px;
+    font-size: 28px;
+    font-weight: 700;
+}
+.logo-design{
+    color: var(--pink);
+}
+/* header end */
+/* banner */
+.banner{
+    width: 100%;
+    display: flex;
+    height: 550px;
+    justify-content: space-between;
+    align-items: center;
+    background: url('img/Group\ 14.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.banner-text h2{
+    color: var(--title);
+    font-size: 48px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.banner-text h1{
+    font-size: 96px;
+    font-weight: 800;
+    text-transform: uppercase;
+    background-image: var(--gr-one);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.banner-text ul li{
+    list-style-type: none;
+    line-height: 2em;
+    color: var(--text);
+}
+.banner-text ul li i{
+    margin-right: 15px;
+}
+.btns{
+    margin-top: 10%;
+}
+.btn{
+    padding: 12px 30px 12px 30px;
+    text-decoration: none;
+    border-radius: 25px;
+    color:#fff;
+    text-transform: uppercase;
+}
+.btn-one{
+    background: var(--pink);
+    margin-right: 5px;
+}
+.btn-two{
+    background: var(--blue);
+}
+.image img{
+    width: 555px;
+    margin-right: 90px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    object-fit: contain;
+}
+.banner-text{
+    margin-left: 100px;
+}
+.aboutus{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 550px;
+    background:  url(img/Group\ 14.png); 
+    background-size: cover;
+}
+.aboutus img{
+  width:680px;
+  object-fit: contain;
+  margin-left: 50px;
+}
+.about-text{
+    width: 33%;
+    text-align: right;
+    margin-right: 100px;
+}
+.gradient{
+    background-image: var(--gr-two);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.about-text h2{
+    font-size: 36px;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+.about-text p{
+    font-size: 15px;
+    color: var(--text);
+    line-height: 1.5em;
+}
+.purpose{
+    margin-top: 6%;
+    font-size: 18px!important;
+    font-weight: 600;
+}
+.about-text h3{
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--text);
+}
+.online-game{
+    width: 100%;
+    height: 550px;
+}
+.online-game h2{
+    margin-top: 8%;
+    text-align: center;
+    font-size: 36px;
+    color: var(--title);
+    line-height: 1.6em;
+}
+.online-game p{
+    text-align: center;
+    color: var(--text);
+}
+/* online game img */
+.container {
+    display: grid;
+    grid-template-columns: repeat(4, 250px);
+    gap: 15px; 
+    max-width: 80%; 
+    margin: 30px auto; 
+  }
+  .box-div p{
+    margin-top: 5px;
+    text-align: left;
+    font-size: 14px;
+  }
+  .box-div img {
+    width: 100%;
+    object-fit: cover;
+  }
+
+
+  .image-container {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+  }
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  .centered-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+  }
+  .play-icon {
+    display: block;
+    font-size: 60px;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  .overlay p {
+    margin-top: 10px;
+    font-size: 14px;
+    color: var(--pink);
+    cursor: pointer;
+  }
+  
+  .image-container:hover .overlay {
+    opacity: 1; /* Change opacity to 1 on hover */
+  }
+
+  .instantly-text{
+   text-align: right;
+  }
+  .instantly-text .design{
+    color: var(--pink);
+  }
+  .instantly-text h2{
+    font-size: 36px;
+
+  }
+  .instantly-text p{
+    color: var(--text);
+
+  }
+  .instantly{
+    height: 600px;
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    gap: 20;
+    align-items: center;
+  }
+  .ins-image .image-one{
+    width: 450px;
+  }
+  .ins-image{
+    position: relative;
+  }
+  .ins-image .image-two{
+    width: 190px;
+    position: absolute;
+    bottom: -6%;
+    left: -23%;
+  }
+
+  /* before footer */
+  .before-footer {
+    background: #FCF7FE;
+    display: grid;
+    grid-template-columns:repeat(5,auto);
+    justify-content: center;
+    align-items: center;
+   align-content: space-between;
+    height: 250px;
+  }
+.items{
+display: flex;
+align-items: center;
+width: 230px;
+height: 60px;
+background: #fff;
+border-radius: 25px;
+}
+.items img{
+    width: 30px;
+    object-fit: contain;
+    padding-left: 15px;
 }
