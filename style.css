@@ -22,7 +22,7 @@ header {
 
   }
   
-  .logo img {
+  header .logo img {
     height: 50px;
     margin-left: 100px;
   }
@@ -87,6 +87,7 @@ header {
     background: url('img/Group\ 14.png');
     background-size: contain;
     background-repeat: no-repeat;
+
 }
 .banner-text h2{
     color: var(--title);
@@ -200,11 +201,18 @@ header {
 }
 /* online game img */
 .container {
-    display: grid;
-    grid-template-columns: repeat(4, 250px);
+    display: flex;
+    /* grid-template-columns: repeat(4, 250px); */
     gap: 15px; 
-    max-width: 80%; 
-    margin: 30px auto; 
+    /* max-width: 80%;  */
+    /* margin: 30px auto;  */
+    justify-content: center;
+    margin-top: 30px;
+    flex-wrap: wrap;
+
+  }
+  .box-div{
+    width: 250px;
   }
   .box-div p{
     margin-top: 5px;
@@ -228,9 +236,10 @@ header {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.65);
     opacity: 0;
     transition: opacity 0.3s ease;
+    border-radius: 10px;
   }
   .centered-content {
     position: absolute;
@@ -294,25 +303,259 @@ header {
   }
 
   /* before footer */
-  .before-footer {
+  .before-footer{
     background: #FCF7FE;
-    display: grid;
-    grid-template-columns:repeat(5,auto);
+    height: 350px;
+    display: flex;
     justify-content: center;
     align-items: center;
-   align-content: space-between;
-    height: 250px;
+  }
+  .box-item{
+    display: flex;
+    flex-wrap: wrap;
+    height: 150px;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
   }
 .items{
 display: flex;
 align-items: center;
-width: 230px;
-height: 60px;
+width: 220px;
+height: 50px;
 background: #fff;
 border-radius: 25px;
+font-size: 14px;
+border: 1px solid #fff;
 }
 .items img{
-    width: 30px;
+    width: 35px;
     object-fit: contain;
     padding-left: 15px;
+    margin-right: 10px;
+}
+.items:hover{
+  border:1px solid var(--pink);
+  color: var(--pink);
+  cursor: pointer;
+  transition: 0.8s ;
+}
+
+footer{
+  height: 400px;
+  background: #0B0223;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-container p{
+  color: #fff;
+}
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-container .logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} 
+
+.footer-nav ul{
+  margin-top: 25px;
+  color: #fff;
+  display: flex;
+  gap: 25px;
+  list-style-type: none;
+}
+
+.social-icon ul{
+  margin-top: 25px;
+  display: flex;
+  gap: 35px;
+  list-style-type: none;
+}
+.social-icon ul li a{
+  color: #fff;
+}
+.social-icon ul li a i:hover{
+  transition: 0.5s ;
+  transform: scale(0.8);
+}
+
+.bottom-footer-nav ul{
+  margin-top: 25px;
+  color: rgba(255, 255, 255, 0.60);
+  display: flex;
+  gap: 45px;
+  font-size: 14px;
+  list-style-type: none;
+
+}
+.copyright{
+  margin-top: 30px;
+  color: rgba(255, 255, 255, 0.60)!important;
+  font-size: 12px;
+  text-align: center;
+}
+
+/* mobile responsive  start*/
+@media only screen and (max-width: 576px) {
+  /* header */
+  header{
+    width: 100%;
+    height: 200px;
+    padding-top:40px ;
+    flex-direction: column;
+    padding-bottom: 20px;
+    justify-content: start;
+    margin-bottom: 40%;
+
+  }
+    
+  header .logo img {
+    height: 50px;
+    margin-left: 0px;
+  }
+  .image img{
+    margin-top: 30px;
+      position: static;
+      width: 100%;
+      margin-right: 0px;
+  }
+  .menu {
+    margin-right: 0px;
+  }
+  .menu li{
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 16px;
+  }
+  .banner{
+    padding: 50px 5px 50px 5px;
+    flex-direction: column-reverse;
+    background: none;
+    margin-bottom: 5%;
+  }
+  .banner-text{
+    margin-top: 60px;
+    margin-left: 30px;
+    background: url('img/Group\ 14.png');
+    background-size: contain;
+    background-position: bottom;
+  }
+
+  .banner .banner-text{
+    padding: 40px 50px 40px 50px;
+  }
+.banner-text h1{
+    font-size: 45px;
+  }
+  .banner-text h2{
+    font-size: 35px;
+  }
+  .banner-text li{
+    font-size: 14px;
+  }
+  .aboutus{
+    flex-direction: column;
+    height: auto;
+    justify-content: center;
+    background: none;
+    text-align: center;
+  }
+  .aboutus img{
+    width: 100%;
+    margin-left: 0px;
+    background-color: #fff;
+  }
+  .about-text{
+    background-color: #fff;
+    width: 90%;
+    text-align: center;
+    margin-right: 0px;
+  }
+  .about-text p{
+    font-size: 12px;
+    margin-bottom: 10px;
+  }
+  .about-text .purpose{
+    margin-bottom: 0px;
+  }
+  .about-text h3{
+    font-size: 22px;
+  }
+  .online-game{
+    height: auto;
+  }
+  .online-game h2{
+    font-size: 28px;
+  }
+  .online-game p{
+    font-size: 12px;
+  }
+  .instantly{
+    flex-direction: column;
+    height: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 50px;
+  }
+  .instantly-text{
+    margin-left: 0px;
+    text-align: center;
+  }
+  .instantly-text p{
+    margin-bottom: 25px;
+    font-size: 14px;
+  }
+  .ins-image {
+    margin-right: 0px;
+  }
+  .ins-image .image-one{
+    width: 70%;
+    margin: 0 auto;
+    display: block;
+  }
+  .ins-image .image-two{
+    bottom: -10%;
+    left: 5%;
+    width: 120px;
+  }
+  .before-footer{
+    height: 350px;
+  }
+  .box-item{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 8px;
+  }
+  .box-item .items{
+    width: 130px;
+  }
+  .box-item .items img{
+    width: 20px;
+  }
+  .box-item .items span{
+    font-size: 10px!important;
+  }
+  .footer{
+    height: auto;
+  }
+  .footer-nav ul , .social-icon ul{
+    display: grid;
+    grid-template-columns: auto auto auto ;
+  }
+  .bottom-footer-nav ul{
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+
 }
